@@ -15,3 +15,6 @@ COPY alert.py /home/forumbot/.sopel/plugins/alert.py
 
 ENV ENV=/home/forumbot/.rc
 COPY .rc /home/forumbot/.rc
+
+COPY fetch.py /home/forumbot/app/fetch.py
+WORKDIR /home/forumbot/app
