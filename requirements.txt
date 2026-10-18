@@ -1,0 +1,4 @@
+beautifulsoup4==4.15.0
+furl==2.1.4
+requests==2.34.2
+sopel==8.0.4
