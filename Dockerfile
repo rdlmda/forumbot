@@ -1,7 +1,5 @@
 FROM python:alpine3.24
 
-RUN touch /tmp/sopel-alert.txt && chmod 777 /tmp/sopel-alert.txt
-
 RUN adduser -D forumbot
 USER forumbot
 
