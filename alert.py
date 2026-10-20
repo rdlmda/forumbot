@@ -1,15 +1,15 @@
 from pathlib import Path
 from sopel import plugin
 
-QUEUE = Path("/tmp/sopel-alert.txt")
+QUEUE_FILE = Path("/tmp/message_queue.txt")
 CHANNEL = "#bots2"
 
 @plugin.interval(5)
 def check_for_notice(bot):
-    if not QUEUE.exists():
+    if not QUEUE_FILE.exists():
         return
 
-    message = QUEUE.read_text().strip()
+    message = QUEUE_FILE.read_text().strip()
     if message:
-        QUEUE.write_text("")
+        QUEUE_FILE.write_text("")
         bot.say(message, CHANNEL)

@@ -6,6 +6,7 @@ from furl import furl
 from time import sleep
 
 STATE_FILE = Path("forum_state.json")
+QUEUE_FILE = Path("/tmp/message_queue.txt")
 BASE_URL = "https://forum.inthemansion.com"
 
 if STATE_FILE.exists():
@@ -48,12 +49,14 @@ for i, forum in enumerate(forums):
 
 		if previous is None:
 			message = f'New topic on the forum: "{current["title"]}" ∙ Posted by {current["author"]} on {current["topic_date"]} ∙ {url}'
+			QUEUE_FILE.write_text(message)
 		elif (
 			previous["latest_reply_date"] != latest_reply_date
 			or previous["latest_reply_author"] != latest_reply_author
 			or previous["replies"] != replies
 		):
 			message = f'New reply on the topic: "{current["title"]} by {current["author"]}" ∙ {current["replies"]}, {current["views"]} ∙ Reply by {current["latest_reply_author"]} on {current["topic_date"]} ∙ {url}'
+			QUEUE_FILE.write_text(message)
 
 		state[url] = current
 	STATE_FILE.write_text(json.dumps(state, indent=2))
