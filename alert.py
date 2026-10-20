@@ -2,7 +2,7 @@ from pathlib import Path
 from sopel import plugin
 
 QUEUE_FILE = Path("/tmp/message_queue.txt")
-CHANNEL = "#bots2"
+CHANNEL = "#forum-feed"
 
 @plugin.interval(5)
 def check_for_notice(bot):
