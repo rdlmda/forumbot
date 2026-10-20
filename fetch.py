@@ -55,7 +55,7 @@ for i, forum in enumerate(forums):
 			or previous["latest_reply_author"] != latest_reply_author
 			or previous["replies"] != replies
 		):
-			message = f'New reply on the topic: "{current["title"]} by {current["author"]}" ∙ {current["replies"]}, {current["views"]} ∙ Reply by {current["latest_reply_author"]} on {current["topic_date"]} ∙ {url}'
+			message = f'New reply on the topic: "{current["title"]} by {current["author"]}" ∙ {current["replies"]}, {current["views"]} ∙ Reply by {current["latest_reply_author"]} on {current["latest_reply_date"]} ∙ {url}'
 			QUEUE_FILE.write_text(message)
 
 		state[url] = current
