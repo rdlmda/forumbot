@@ -11,12 +11,11 @@ Then it'll periodically check for updates on the forums and send alerts to the c
 
 - Clone this repository
 - Build the image: `docker build -t rdlmda/forumbot .`
-- Start the bot: `docker run --name forumbot --rm -it -v $(pwd)/forum_state.json:/home/forumbot/app/forum_state.json rdlmda/forumbot /home/forumbot/.local/bin/sopel start`
+- Start the bot: `docker run --name forumbot --rm -it -v $(pwd)/forum_state.json:/home/forumbot/app/forum_state.json rdlmda/forumbot`
 - Run on the host: `while true; do date; docker exec -it forumbot python /home/forumbot/app/fetch.py; sleep 600; done`
 
 ## To-do list
 
-- Improve the Dockerfile (CMD / RUN / ENTRYPOINT, etc).
 - Write a `docker-compose.yml`.
 - Fetcher should output on Docker logs.
 - Publish an image on Docker Hub.

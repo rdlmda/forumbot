@@ -16,3 +16,5 @@ COPY .rc /home/forumbot/.rc
 
 COPY fetch.py /home/forumbot/app/fetch.py
 WORKDIR /home/forumbot/app
+ENTRYPOINT ["/home/forumbot/.local/bin/sopel"]
+CMD ["start"]
