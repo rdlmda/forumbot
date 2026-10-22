@@ -1,0 +1,10 @@
+services:
+
+  bot:
+    image: rdlmda/forumbot
+    container_name: forumbot
+    restart: unless-stopped
+    build:
+      context: ./build
+    volumes:
+      - ./data/forum_state.json:/home/forumbot/app/forum_state.json

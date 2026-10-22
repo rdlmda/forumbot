@@ -16,7 +16,6 @@ Then it'll periodically check for updates on the forums and send alerts to the c
 
 ## To-do list
 
-- Write a `docker-compose.yml`.
 - Fetcher should output on Docker logs.
 - Publish an image on Docker Hub.
 
