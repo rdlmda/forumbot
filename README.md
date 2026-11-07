@@ -1,6 +1,8 @@
 # ForumBot
 
-A IRC bot that relays messages written to a local file into an IRC channel.
+An IRC bot that alerts for new phpBB forum topics or replies.
+
+Built for https://forum.inthemansion.com/ and irc://irc.inthemansion.com
 
 ## Behavior
 
