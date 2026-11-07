@@ -36,6 +36,7 @@ Built for https://forum.inthemansion.com/ and irc://irc.inthemansion.com
 - Fetcher should output on Docker logs.
 - Publish an image on Docker Hub.
 - Incorporate helper script into the bot main code.
+- Named volume for data persistence.
 
 ## License
 
