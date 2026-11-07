@@ -33,6 +33,7 @@ A IRC bot that relays messages written to a local file into an IRC channel.
 
 - Fetcher should output on Docker logs.
 - Publish an image on Docker Hub.
+- Incorporate helper script into the bot main code.
 
 ## License
 
