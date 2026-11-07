@@ -25,8 +25,8 @@ A IRC bot that relays messages written to a local file into an IRC channel.
 ## Set up
 
 - Clone this repository
-- Build the image: `docker build -t rdlmda/forumbot .`
-- Start the bot: `docker run --name forumbot --rm -it -v $(pwd)/forum_state.json:/home/forumbot/app/forum_state.json rdlmda/forumbot`
+- Build the image: `docker build -t rdlmda/forumbot build/`
+- Start the bot: `docker run --name forumbot --rm -it -v $(pwd)/data/forum_state.json:/home/forumbot/app/forum_state.json rdlmda/forumbot`
 - Run on the host: `while true; do date; docker exec -it forumbot python /home/forumbot/app/fetch.py; sleep 600; done`
 
 ## To-do list
